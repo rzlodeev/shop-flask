@@ -1,0 +1,31 @@
+{% extends "base.html" %}{% block title %}
+Home
+{% endblock %}
+
+{% block content %}
+<br>
+{% if user.is_authenticated %}
+<p>Hi, {{ user }}</p>
+{% else %}
+<p>Hi! Please <a href="/login">authorize</a> to access full possibilities of our site!</p>
+{% endif %}
+<h4 align="center">Products</h4>
+    <div class="grid-box card-group">
+        {% for product in products_list %}
+            <div class="grid-elem card">
+                <div class="card-body">
+                    <img class="card-img-top"
+                    <h5 class="card-title">{{ product.name }}</h5>
+                    <p class="cart-text text-muted">{{ product.price }}$</p>
+                    <form method="POST">
+                        <div>
+                            <input type="hidden" value="{{ product.id }}" name="product_add">
+                            <button type="submit" class="btn btn-primary">Add to cart</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+
+{% endblock %}

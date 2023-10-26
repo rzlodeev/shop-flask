@@ -1,0 +1,16 @@
+.cart-btns {
+    display: flex;
+    justify-content: flex-start
+}
+
+.cart-btn {
+
+}
+
+.grid-box {
+    display: flex
+}
+
+.grid-elem {
+
+}
