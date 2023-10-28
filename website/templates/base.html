@@ -15,9 +15,10 @@
             href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
             crossorigin="anonymous"
     />
-    <link rel="stylesheet" href="{{ url_for('static',filename='styles/index.css') }}">
+        <link rel="stylesheet" href="{{ url_for('static',filename='styles/index.css') }}">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>{% block title %}Home{% endblock %}</title>
+    {{ turbo() }}
 </head>
 <body>
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
